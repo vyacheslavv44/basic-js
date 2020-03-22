@@ -1,14 +1,4 @@
 module.exports = function getSeason(date) {
-    //throw 'Not implemented';
-    // remove line with error and write your code here
-
-
-    //var date = new Date();
-
-
-    /*if (!date) {
-        return 'Unable to determine the time of year!';
-    }*/
 
     if (date == undefined) {
         return 'Unable to determine the time of year!';
@@ -16,12 +6,8 @@ module.exports = function getSeason(date) {
 
     if (Object.prototype.toString.call(date) !== '[object Date]') {
         throw new Error();
-        //return 'TypeError: Cannot read property \'getMonth\' of undefined';
     }
 
-    /*if (isNaN(date)) {
-        throw new Error();
-    }*/
 
     var n = date.getMonth();
 
@@ -40,6 +26,5 @@ module.exports = function getSeason(date) {
     if ([8, 9, 10].includes(n)) {
         return 'autumn';
     }
-
 
 };
